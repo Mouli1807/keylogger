@@ -1,0 +1,105 @@
+.container {
+    width: 100wv;
+    height: 100vh;  
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    overflow-y: hidden; 
+    overflow-x: hidden;
+    
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Edge: Hides the scrollbar */
+}
+
+.keybox {
+    display: flex;          /* Flexbox for keybox to arrange children */
+    flex-direction: column;    /* Arrange children in a row */
+    
+    justify-content: left;
+    gap: 20px;              /* Space between items */
+    
+    padding: 200px;
+    margin-left: 30px;
+    height: 50vh;
+    
+    
+}
+
+h1 {
+    font-size: 100px;        /* Adjust font size */
+    color: #333;            /* Font color */
+    margin: 0;              /* Remove margin */
+}
+
+
+
+
+
+.about {
+    font-size: 20px;        /* Adjust font size */
+    color: #060606;            /* Font color */
+    margin: 0;              /* Remove margin */
+
+}
+
+
+.infobox{
+    border: 2px ;
+    margin-top: 12%;
+    margin-bottom: 10%;
+    margin-right: 5%;
+    width: 40%;
+    height: 50%;
+    
+    border-radius: 10px;
+    background-color: #e7e5e5;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 
+    0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+
+#info{
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    font-style: unset;
+    
+}
+
+.background {
+    position: absolute; /* Place the background behind the content */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -10; /* Push the background below other content */
+}
+
+.bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Make sure the image covers the entire background */
+    filter: blur(25px); /* Apply the blur effect */
+}
+
+
+.upward-scrollbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px; /* Height of the scrollbar */
+    background: linear-gradient(to top, #313030, #535252); /* Gradient color for scrollbar */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+
+
+
+
+
