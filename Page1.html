@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>key Logger1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="Page1">
+
+    <div class="wrapper" id="page1Wrapper">
+        <div class="background">
+            <img src="./assets/HD-wallpaper-letters-newspaper-background-letters-newspaper-background.jpg" alt="Background" class="bg-img">
+        </div>
+        <div class="container">
+    
+            <div class="keybox">
+                <h1 >Key Logger</h1>
+                <p class="about">Keyloggers are built for the act of keystroke logging — 
+                    <br>creating records of everything you type on a computer or mobile keyboard. 
+                <br>These are used to quietly monitor your computer activity while you use your devices as normal.</p>
+               
+            </div>
+            <div class="infobox">
+                <p id="info"> 
+                    <img  class="land-img" src="./assets/vecteezy_overhead-shot-of-man-working-on-laptop-flat-lay-top-view_5022141.svg"/>
+            </div>
+                 
+        </div>
+
+        <div class="upward-scrollbar" id="scrollbar">
+            <div class="arrow"></div>
+            <div class="arrow"></div>
+            <div class="swipe-text">Swipe Up</div>
+        </div>
+
+    
+    </div>
+   
+    
+
+
+
+
+    <script>
+        const pageWrapper = document.getElementById('page1Wrapper');
+        const scrollbar = document.getElementById('scrollbar');
+
+        const redirectToPage2 = () => {
+    // Add slide-up class to trigger animation
+    pageWrapper.classList.add('slide-up');
+
+    // Redirect to page2.html after animation completes
+    setTimeout(() => {
+        window.location.href = "page2.html";
+    }, 700); // Match the animation duration (700ms)
+};
+
+// Trigger animation on click
+scrollbar.addEventListener('click', redirectToPage2);
+    // Optional: Trigger animation on swipe up
+    let startY = 0;
+    window.addEventListener('touchstart', (e) => {
+        startY = e.touches[0].clientY;
+    });
+
+    window.addEventListener('touchmove', (e) => {
+        const endY = e.touches[0].clientY;
+        if (startY - endY > 50) {
+            redirectToPage2();
+    
+}
+});
+
+// Optional: Trigger animation on scroll down
+window.addEventListener('wheel', (e) => {
+    if (e.deltaY > 0) {
+        redirectToPage2();
+    }
+});
+</script>
+
+</body>
+</html>
